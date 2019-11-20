@@ -20,7 +20,7 @@ class Timer extends Component {
         return (
             <div className="timer">
                 { minutes === 0 && seconds === 0
-                    ? <div className="time"><h1>Busted!</h1></div>
+                    ? <div className="time"><h1>Done!</h1></div>
                     : <div className="time"><h1>Time Remaining:</h1><h2> {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h2></div>
                 }
                 <form className="form" onSubmit={this.handleSubmit}>
@@ -46,9 +46,6 @@ class Timer extends Component {
         clearInterval(this.myInterval)
     }
     addTime(time,add, min){
-        // event.preventDefault();
-        console.log(time, add);
-
         const { seconds, minutes } = this.state
         const secondHelp = time * 60
         if(add && min){
@@ -56,63 +53,51 @@ class Timer extends Component {
                 minutes: minutes + time
             }))
         } else if(!add && min){
-
             if((minutes - time) > 0  ){
                 this.setState(({ minutes }) => ({
                     minutes: minutes - time
+                }))
+            } else if((minutes - time) < 0){
+                this.setState(({ minutes }) => ({
+                    minutes: 0,
+                    seconds: 0
                 }))
             } else {
                 this.setState(({ minutes }) => ({
                     minutes: 0 
                 }))
             }
-
         }
-        else if(add && !min){  console.log("add")
+        else if(add && !min){ 
             if((secondHelp + seconds) > 59){
-                
                 this.setState(({ minutes }) => ({
                     minutes: minutes + 1,
                     seconds: (secondHelp + seconds) - 60
                 }))
             } else {
-                console.log("add 2")
                 this.setState(({ seconds }) => ({
-                    
                     seconds: secondHelp + seconds
                 }))
             }
         } else {
             if((seconds - secondHelp) < 0){
-
-    
                     this.setState(({ minutes }) => ({
                         minutes: minutes - 1,
                         seconds: 59 + (seconds - secondHelp)
                     }))
-                    console.log("naar beneden " + seconds + "  " + minutes)
-                    if ( minutes < 0) {
-                     //   console.log("naar beneden " + seconds + "  " + minutes)
+                    if ( minutes <= 0) {
                         this.setState(({ minutes }) => ({
                             minutes: 0,
                             seconds: 0
                         }))
                     }
-
-                
             } else {
                 this.setState(({ seconds }) => ({
-                    
                     seconds: seconds - secondHelp
                 }))
             }
-           
         }
-        
-    
-
     }
-    
     handleSubmit(event) {
         event.preventDefault();
         if(!this.state.checked){
