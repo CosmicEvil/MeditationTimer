@@ -40,6 +40,12 @@
 }
 nav{
   position: absolute;
+  a{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    
+  }
 }
 .timer{
   width: 100%;
@@ -71,14 +77,18 @@ nav{
  
 }
 .more{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
 
   .btn{
     margin: 15px 10px;
-   
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    width: 80px;
   }
   margin-bottom: 2.8rem;
 }
@@ -93,5 +103,18 @@ footer{
     padding: 0;
     margin-top: 0;
     font-size: 1em;
+  }
+}
+
+
+.break {
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+ 
+@media screen and (min-width: 500px) {
+  .break {
+    display: none;
   }
 }

@@ -30,9 +30,10 @@ class Timer extends Component {
                     }
                 </form>
                <div className="more"> 
-                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(5,false, true)} >- 5m</a>
-                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(1,false, true)}>- 1m</a>
-                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(0.5,false,false)} >- 30s</a>
+                    <a className="waves-effect waves-red red lighten-2 btn" onClick={() => this.addTime(5,false, true)} >- 5m</a>
+                    <a className="waves-effect waves-red red lighten-2 btn" onClick={() => this.addTime(1,false, true)}>- 1m</a>
+                    <a className="waves-effect waves-red red lighten-2 btn" onClick={() => this.addTime(0.5,false,false)} >- 30s</a>
+                    <div className="break"></div>
                     <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(0.5,true, false)} >+ 30s</a>
                     <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(1,true, true)} >+ 1m</a>
                     <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(5,true, true)} >+ 5m</a>
