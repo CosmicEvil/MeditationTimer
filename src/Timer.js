@@ -5,7 +5,7 @@ class Timer extends Component {
     constructor() {
         super();
         this.state = {
-          minutes: 3,
+          minutes: 5,
           seconds: 0,
           checked: false
        
@@ -18,21 +18,24 @@ class Timer extends Component {
     render() {
         const { minutes, seconds } = this.state
         return (
-            <div className="timer">
+            <div className="timer  light-green lighten-4">
                 { minutes === 0 && seconds === 0
-                    ? <div className="time"><h1>Done!</h1></div>
-                    : <div className="time"><h1>Time Remaining:</h1><h2> {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h2></div>
+                    ? <div className="time light-green-text text-darken-4"><h1>Time Remaining:</h1><h2>Done!</h2></div>
+                    : <div className="time light-green-text text-darken-4"><h1>Time Remaining:</h1><h2> {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h2></div>
                 }
                 <form className="form" onSubmit={this.handleSubmit}>
-                    <button>Start</button>
+                    { this.state.checked
+                        ? <button className="waves-effect waves-light btn-large">stop</button>
+                        : <button className="waves-effect waves-light btn-large">start</button>
+                    }
                 </form>
                <div className="more"> 
-                    <button className="button button-outline" onClick={() => this.addTime(5,false, true)} >- 5m</button>
-                    <button className="button button-outline" onClick={() => this.addTime(1,false, true)}>- 1m</button>
-                    <button className="button button-outline" onClick={() => this.addTime(0.5,false,false)} >- 30s</button>
-                    <button className="button button-outline" onClick={() => this.addTime(0.5,true, false)} >+ 30s</button>
-                    <button className="button button-outline" onClick={() => this.addTime(1,true, true)} >+ 1m</button>
-                    <button className="button button-outline" onClick={() => this.addTime(5,true, true)} >+ 5m</button>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(5,false, true)} >- 5m</a>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(1,false, true)}>- 1m</a>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(0.5,false,false)} >- 30s</a>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(0.5,true, false)} >+ 30s</a>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(1,true, true)} >+ 1m</a>
+                    <a className="waves-effect waves-green light-green btn" onClick={() => this.addTime(5,true, true)} >+ 5m</a>
                
                 </div>
             </div>
@@ -95,13 +98,12 @@ class Timer extends Component {
                 this.setState(({ seconds }) => ({
                     seconds: seconds - secondHelp
                 }))
-            }
+           }
         }
     }
     handleSubmit(event) {
         event.preventDefault();
         if(!this.state.checked){
-     
             this.myInterval = setInterval(() => {
             const { seconds, minutes } = this.state
             if (seconds > 0) {
@@ -123,10 +125,7 @@ class Timer extends Component {
         } else{
            clearInterval(this.myInterval)
         }
-       
         this.setState({checked: !this.state.checked})
-       
-    }   
-   
+    }  
 }
 export default Timer;
