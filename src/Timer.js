@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Sound from './Sound';
 
 class Timer extends Component {
     constructor() {
@@ -103,8 +103,11 @@ class Timer extends Component {
         }
     }
     handleSubmit(event) {
+        const audio = new Audio("../assets/gong.mp3")
+
         event.preventDefault();
         if(!this.state.checked){
+            audio.play() 
             this.myInterval = setInterval(() => {
             const { seconds, minutes } = this.state
             if (seconds > 0) {
@@ -114,6 +117,7 @@ class Timer extends Component {
             }
             if (seconds === 0) {
               if (minutes === 0) {
+                audio.play() 
                 clearInterval(this.myInterval)
               } else {
                 this.setState(({ minutes }) => ({
@@ -123,6 +127,9 @@ class Timer extends Component {
               }
             }
           }, 1000)
+        //   return (
+        //     <Sound />
+        //    )
         } else{
            clearInterval(this.myInterval)
         }
