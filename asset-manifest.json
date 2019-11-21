@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MeditationTimer/static/css/main.6c8c9376.chunk.css",
+    "main.js": "/MeditationTimer/static/js/main.3c438206.chunk.js",
+    "main.js.map": "/MeditationTimer/static/js/main.3c438206.chunk.js.map",
+    "runtime-main.js": "/MeditationTimer/static/js/runtime-main.cf41da2a.js",
+    "runtime-main.js.map": "/MeditationTimer/static/js/runtime-main.cf41da2a.js.map",
+    "static/js/2.65755673.chunk.js": "/MeditationTimer/static/js/2.65755673.chunk.js",
+    "static/js/2.65755673.chunk.js.map": "/MeditationTimer/static/js/2.65755673.chunk.js.map",
+    "index.html": "/MeditationTimer/index.html",
+    "precache-manifest.eec1d5accf1eb3f984b9f5b8d3fc75bb.js": "/MeditationTimer/precache-manifest.eec1d5accf1eb3f984b9f5b8d3fc75bb.js",
+    "service-worker.js": "/MeditationTimer/service-worker.js",
+    "static/css/main.6c8c9376.chunk.css.map": "/MeditationTimer/static/css/main.6c8c9376.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cf41da2a.js",
+    "static/js/2.65755673.chunk.js",
+    "static/css/main.6c8c9376.chunk.css",
+    "static/js/main.3c438206.chunk.js"
+  ]
+}
