@@ -1,6 +1,6 @@
 import React from 'react';
 import Timer from './Timer';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Header from './Header';
 import './App.scss';
 

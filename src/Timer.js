@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Sound from './Sound';
+//import Sound from './Sound';
 
 class Timer extends Component {
     constructor() {
