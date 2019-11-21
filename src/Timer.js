@@ -103,7 +103,7 @@ class Timer extends Component {
         }
     }
     handleSubmit(event) {
-        const audio = new Audio("../assets/gong.mp3")
+        const audio = new Audio("assets/gong.mp3")
 
         event.preventDefault();
         if(!this.state.checked){
