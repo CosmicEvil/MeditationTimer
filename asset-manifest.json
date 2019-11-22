@@ -1,22 +1,21 @@
 {
   "files": {
     "main.css": "/MeditationTimer/static/css/main.4aef2b99.chunk.css",
-    "main.js": "/MeditationTimer/static/js/main.f3d27d51.chunk.js",
-    "main.js.map": "/MeditationTimer/static/js/main.f3d27d51.chunk.js.map",
+    "main.js": "/MeditationTimer/static/js/main.63dbd980.chunk.js",
+    "main.js.map": "/MeditationTimer/static/js/main.63dbd980.chunk.js.map",
     "runtime-main.js": "/MeditationTimer/static/js/runtime-main.cf41da2a.js",
     "runtime-main.js.map": "/MeditationTimer/static/js/runtime-main.cf41da2a.js.map",
-    "static/js/2.93158b7e.chunk.js": "/MeditationTimer/static/js/2.93158b7e.chunk.js",
-    "static/js/2.93158b7e.chunk.js.map": "/MeditationTimer/static/js/2.93158b7e.chunk.js.map",
+    "static/js/2.ed9c6097.chunk.js": "/MeditationTimer/static/js/2.ed9c6097.chunk.js",
+    "static/js/2.ed9c6097.chunk.js.map": "/MeditationTimer/static/js/2.ed9c6097.chunk.js.map",
     "index.html": "/MeditationTimer/index.html",
-    "precache-manifest.698e197882137e9dbd91720d494357a2.js": "/MeditationTimer/precache-manifest.698e197882137e9dbd91720d494357a2.js",
+    "precache-manifest.b337f5f35267f9b8704893134ae4574f.js": "/MeditationTimer/precache-manifest.b337f5f35267f9b8704893134ae4574f.js",
     "service-worker.js": "/MeditationTimer/service-worker.js",
-    "static/css/main.4aef2b99.chunk.css.map": "/MeditationTimer/static/css/main.4aef2b99.chunk.css.map",
-    "static/media/gong.mp3": "/MeditationTimer/static/media/gong.7589e476.mp3"
+    "static/css/main.4aef2b99.chunk.css.map": "/MeditationTimer/static/css/main.4aef2b99.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.cf41da2a.js",
-    "static/js/2.93158b7e.chunk.js",
+    "static/js/2.ed9c6097.chunk.js",
     "static/css/main.4aef2b99.chunk.css",
-    "static/js/main.f3d27d51.chunk.js"
+    "static/js/main.63dbd980.chunk.js"
   ]
 }
